@@ -1,600 +1,377 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-&nbsp;   <meta charset="UTF-8">
-
-&nbsp;   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-&nbsp;   <title>Chirag Lakhani | Mechanical Engineer \& Quality Specialist</title>
-
-&nbsp;   <style>
-
-&nbsp;       :root {
-
-&nbsp;           --primary: #003366; /\* Honda/Industrial Blue \*/
-
-&nbsp;           --secondary: #f4f4f4;
-
-&nbsp;           --accent: #d32f2f; /\* Red accent for energy \*/
-
-&nbsp;           --text: #333;
-
-&nbsp;           --white: #ffffff;
-
-&nbsp;       }
-
-
-
-&nbsp;       body {
-
-&nbsp;           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-&nbsp;           margin: 0;
-
-&nbsp;           padding: 0;
-
-&nbsp;           color: var(--text);
-
-&nbsp;           line-height: 1.6;
-
-&nbsp;           background-color: var(--secondary);
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Navigation \*/
-
-&nbsp;       nav {
-
-&nbsp;           background: var(--primary);
-
-&nbsp;           color: var(--white);
-
-&nbsp;           padding: 1rem 0;
-
-&nbsp;           text-align: center;
-
-&nbsp;           position: sticky;
-
-&nbsp;           top: 0;
-
-&nbsp;           z-index: 1000;
-
-&nbsp;       }
-
-
-
-&nbsp;       nav ul {
-
-&nbsp;           list-style: none;
-
-&nbsp;           padding: 0;
-
-&nbsp;           margin: 0;
-
-&nbsp;       }
-
-
-
-&nbsp;       nav ul li {
-
-&nbsp;           display: inline;
-
-&nbsp;           margin: 0 15px;
-
-&nbsp;       }
-
-
-
-&nbsp;       nav a {
-
-&nbsp;           color: var(--white);
-
-&nbsp;           text-decoration: none;
-
-&nbsp;           font-weight: bold;
-
-&nbsp;           font-size: 1.1rem;
-
-&nbsp;       }
-
-
-
-&nbsp;       nav a:hover {
-
-&nbsp;           color: #ddd;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Hero Section \*/
-
-&nbsp;       header {
-
-&nbsp;           background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1\&auto=format\&fit=crop\&w=1350\&q=80');
-
-&nbsp;           background-size: cover;
-
-&nbsp;           background-position: center;
-
-&nbsp;           color: var(--white);
-
-&nbsp;           padding: 100px 20px;
-
-&nbsp;           text-align: center;
-
-&nbsp;       }
-
-
-
-&nbsp;       header h1 {
-
-&nbsp;           font-size: 3rem;
-
-&nbsp;           margin-bottom: 10px;
-
-&nbsp;       }
-
-
-
-&nbsp;       header p {
-
-&nbsp;           font-size: 1.5rem;
-
-&nbsp;           margin-bottom: 30px;
-
-&nbsp;       }
-
-
-
-&nbsp;       .btn {
-
-&nbsp;           background: var(--accent);
-
-&nbsp;           color: var(--white);
-
-&nbsp;           padding: 10px 25px;
-
-&nbsp;           text-decoration: none;
-
-&nbsp;           border-radius: 5px;
-
-&nbsp;           font-weight: bold;
-
-&nbsp;           transition: 0.3s;
-
-&nbsp;       }
-
-
-
-&nbsp;       .btn:hover {
-
-&nbsp;           background: #b71c1c;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Container \*/
-
-&nbsp;       .container {
-
-&nbsp;           max-width: 1100px;
-
-&nbsp;           margin: auto;
-
-&nbsp;           padding: 40px 20px;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Sections \*/
-
-&nbsp;       section {
-
-&nbsp;           background: var(--white);
-
-&nbsp;           margin-bottom: 20px;
-
-&nbsp;           padding: 40px;
-
-&nbsp;           border-radius: 8px;
-
-&nbsp;           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-&nbsp;       }
-
-
-
-&nbsp;       h2 {
-
-&nbsp;           color: var(--primary);
-
-&nbsp;           border-bottom: 2px solid var(--accent);
-
-&nbsp;           display: inline-block;
-
-&nbsp;           padding-bottom: 5px;
-
-&nbsp;           margin-bottom: 20px;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Skills Grid \*/
-
-&nbsp;       .skills-grid {
-
-&nbsp;           display: grid;
-
-&nbsp;           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-&nbsp;           gap: 20px;
-
-&nbsp;       }
-
-
-
-&nbsp;       .skill-card {
-
-&nbsp;           background: #eef2f5;
-
-&nbsp;           padding: 20px;
-
-&nbsp;           border-radius: 5px;
-
-&nbsp;           text-align: center;
-
-&nbsp;       }
-
-
-
-&nbsp;       .skill-card h3 {
-
-&nbsp;           margin-top: 0;
-
-&nbsp;           color: #003366;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Project / Case Studies \*/
-
-&nbsp;       .project {
-
-&nbsp;           border-left: 5px solid var(--primary);
-
-&nbsp;           padding-left: 20px;
-
-&nbsp;           margin-bottom: 30px;
-
-&nbsp;       }
-
-
-
-&nbsp;       .project h3 {
-
-&nbsp;           margin-top: 0;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Footer \*/
-
-&nbsp;       footer {
-
-&nbsp;           background: var(--primary);
-
-&nbsp;           color: var(--white);
-
-&nbsp;           text-align: center;
-
-&nbsp;           padding: 20px;
-
-&nbsp;           margin-top: 40px;
-
-&nbsp;       }
-
-
-
-&nbsp;       footer a {
-
-&nbsp;           color: #fff;
-
-&nbsp;           text-decoration: underline;
-
-&nbsp;       }
-
-
-
-&nbsp;       /\* Responsive \*/
-
-&nbsp;       @media (max-width: 768px) {
-
-&nbsp;           header h1 { font-size: 2rem; }
-
-&nbsp;           nav ul li { display: block; margin: 10px 0; }
-
-&nbsp;       }
-
-&nbsp;   </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Lakhani | Quality Engineer</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. CORE THEME --- */
+        :root {
+            --bg-dark: #0a192f;
+            --bg-card: #112240;
+            --accent: #64ffda; /* Cyan */
+            --text-main: #ccd6f6;
+            --text-muted: #8892b0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- 2. NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: var(--bg-dark);
+            border-bottom: 1px solid #1f3a5f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 5px 12px;
+        }
+
+        nav ul { display: flex; gap: 30px; }
+        nav a { font-size: 0.9rem; font-family: 'Roboto Mono', monospace; }
+        nav a:hover { color: var(--accent); }
+
+        /* --- 3. HERO SECTION --- */
+        .hero {
+            padding: 100px 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .intro { color: var(--accent); font-family: 'Roboto Mono', monospace; margin-bottom: 20px; font-size: 1.1rem; }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 550px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            background: transparent;
+        }
+
+        .btn-main:hover { background: rgba(100, 255, 218, 0.1); }
+
+        /* --- 4. ABOUT & PROFILE --- */
+        .about-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--accent);
+            z-index: 2;
+        }
+
+        /* --- 5. EXPERIENCE SECTION (New!) --- */
+        .experience-section {
+            padding: 50px 10%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .job-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .job-title { font-size: 1.3rem; color: #fff; font-weight: 600; }
+        .job-company { color: var(--accent); font-family: 'Roboto Mono'; font-size: 0.9rem; }
+        .job-date { color: var(--text-muted); font-family: 'Roboto Mono'; font-size: 0.8rem; }
+
+        .job-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .job-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        strong.highlight { color: #fff; font-weight: 500; }
+
+        /* --- 6. PROJECTS --- */
+        .section-header {
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-header h3 { font-size: 2rem; color: #fff; margin-right: 20px; margin-left: 10px;}
+        .section-header span { color: var(--accent); font-family: 'Roboto Mono'; font-size: 1.5rem; }
+        .line { height: 1px; background: #303C55; flex-grow: 1; }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 10% 100px 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 2rem; color: var(--accent); margin-bottom: 20px; }
+        .card h4 { font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
+        .card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; }
+        .tags { font-family: 'Roboto Mono', monospace; font-size: 0.8rem; color: var(--text-muted); word-spacing: 10px;}
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.5rem; }
+            .about-section { grid-template-columns: 1fr; text-align: center; }
+            nav ul { display: none; }
+            .hero { padding-top: 50px; }
+        }
+    </style>
 </head>
-
 <body>
 
-
-
-&nbsp;   <nav>
-
-&nbsp;       <ul>
-
-&nbsp;           <li><a href="#about">About</a></li>
-
-&nbsp;           <li><a href="#skills">Skills</a></li>
-
-&nbsp;           <li><a href="#experience">Experience</a></li>
-
-&nbsp;           <li><a href="#contact">Contact</a></li>
-
-&nbsp;       </ul>
-
-&nbsp;   </nav>
-
-
-
-&nbsp;   <header>
-
-&nbsp;       <h1>Chirag Lakhani</h1>
-
-&nbsp;       <p>Mechanical Engineer | Quality Specialist | Lean Six Sigma Green Belt</p>
-
-&nbsp;       <a href="mailto:lakhanichirag.pd@gmail.com" class="btn">Hire Me</a>
-
-&nbsp;   </header>
-
-
-
-&nbsp;   <div class="container">
-
-&nbsp;       
-
-&nbsp;       <section id="about">
-
-&nbsp;           <h2>Professional Summary</h2>
-
-&nbsp;           <p>
-
-&nbsp;               Based in <strong>North York, Ontario</strong>, I am a Mechanical Engineering graduate with 1.5 years of experience in high-volume manufacturing environments. 
-
-&nbsp;               I bridge the gap between <strong>Quality Engineering</strong> and <strong>Maintenance</strong>, ensuring that machinery runs efficiently while products meet strict compliance standards.
-
-&nbsp;           </p>
-
-&nbsp;           <p>
-
-&nbsp;               I am proficient in Electro-Mechanical troubleshooting, Root Cause Analysis (Fishbone/5 Whys), and GD\&T. Currently looking for opportunities in the Automotive or Manufacturing sectors.
-
-&nbsp;           </p>
-
-&nbsp;       </section>
-
-
-
-&nbsp;       <section id="skills">
-
-&nbsp;           <h2>Technical Competencies</h2>
-
-&nbsp;           <div class="skills-grid">
-
-&nbsp;               <div class="skill-card">
-
-&nbsp;                   <h3>Quality Assurance</h3>
-
-&nbsp;                   <p>Lean Six Sigma Green Belt</p>
-
-&nbsp;                   <p>ISO 9001 Auditing</p>
-
-&nbsp;                   <p>AQL Sampling \& NCRs</p>
-
-&nbsp;                   <p>PPAP \& FAI</p>
-
-&nbsp;               </div>
-
-&nbsp;               <div class="skill-card">
-
-&nbsp;                   <h3>Maintenance</h3>
-
-&nbsp;                   <p>Preventive Maintenance (PM)</p>
-
-&nbsp;                   <p>Electro-Mechanical Repair</p>
-
-&nbsp;                   <p>Hydraulics \& Pneumatics</p>
-
-&nbsp;                   <p>Lockout Tagout (LOTO)</p>
-
-&nbsp;               </div>
-
-&nbsp;               <div class="skill-card">
-
-&nbsp;                   <h3>Tools \& Software</h3>
-
-&nbsp;                   <p>AutoCAD \& SolidWorks</p>
-
-&nbsp;                   <p>Minitab (SPC Analysis)</p>
-
-&nbsp;                   <p>Calipers \& Micrometers</p>
-
-&nbsp;                   <p>Blueprints \& Schematics</p>
-
-&nbsp;               </div>
-
-&nbsp;           </div>
-
-&nbsp;       </section>
-
-
-
-&nbsp;       <section id="projects">
-
-&nbsp;           <h2>Impact Case Studies</h2>
-
-&nbsp;           <p><em>Examples of how I use data and engineering to solve production problems.</em></p>
-
-&nbsp;           
-
-&nbsp;           <div class="project">
-
-&nbsp;               <h3>🛠️ Reducing Machine Downtime by 15%</h3>
-
-&nbsp;               <p><strong>The Issue:</strong> Persistent jamming in the high-speed packaging unit caused frequent stops.</p>
-
-&nbsp;               <p><strong>My Role:</strong> Led a Root Cause Analysis (Fishbone) to investigate mechanical failure modes.</p>
-
-&nbsp;               <p><strong>The Fix:</strong> Identified a misalignment in the belt tensioner and implemented a specific mechanical adjustment and a new PM schedule.</p>
-
-&nbsp;               <p><strong>Result:</strong> Increased equipment reliability by 15% and reduced material waste.</p>
-
-&nbsp;           </div>
-
-
-
-&nbsp;           <div class="project">
-
-&nbsp;               <h3>📈 Improving Process Efficiency by 16%</h3>
-
-&nbsp;               <p><strong>The Issue:</strong> Workflow bottlenecks in the inspection area were delaying shipments.</p>
-
-&nbsp;               <p><strong>My Role:</strong> Applied Lean Manufacturing principles (5S and Kaizen) to reorganize the workspace.</p>
-
-&nbsp;               <p><strong>Result:</strong> Streamlined the inspection workflow, improving efficiency by 16% and reducing material waste by 11%.</p>
-
-&nbsp;           </div>
-
-&nbsp;       </section>
-
-
-
-&nbsp;       <section id="experience">
-
-&nbsp;           <h2>Work History</h2>
-
-&nbsp;           
-
-&nbsp;           <div style="margin-bottom: 20px;">
-
-&nbsp;               <h3>Junior Maintenance Technician / Quality Engineer</h3>
-
-&nbsp;               <p><strong>Lizza Gruh Udhyog</strong> | Surat, India | <em>Apr 2023 – Apr 2024</em></p>
-
-&nbsp;               <ul>
-
-&nbsp;                   <li>Executed preventive maintenance on packaging machinery and conveyor systems.</li>
-
-&nbsp;                   <li>Managed Incoming Quality Control (IQC) and Final Quality Assurance (FQA).</li>
-
-&nbsp;                   <li>Achieved a zero-defect rate for outgoing shipments through strict ISO compliance.</li>
-
-&nbsp;               </ul>
-
-&nbsp;           </div>
-
-
-
-&nbsp;           <div style="margin-bottom: 20px;">
-
-&nbsp;               <h3>Quality Assurance Intern</h3>
-
-&nbsp;               <p><strong>Swastik Engineering Work</strong> | Surat, India | <em>Feb 2023 – May 2023</em></p>
-
-&nbsp;               <ul>
-
-&nbsp;                   <li>Conducted dimensional inspections using calipers and micrometers.</li>
-
-&nbsp;                   <li>Verified parts against engineering blueprints and tolerance specifications.</li>
-
-&nbsp;               </ul>
-
-&nbsp;           </div>
-
-
-
-&nbsp;           <div>
-
-&nbsp;               <h3>Engineering Intern</h3>
-
-&nbsp;               <p><strong>Laxmipati Engineering Works</strong> | Surat, India | <em>Jun 2022 – Jul 2022</em></p>
-
-&nbsp;               <ul>
-
-&nbsp;                   <li>Supported internal quality audits and maintained production logs.</li>
-
-&nbsp;               </ul>
-
-&nbsp;           </div>
-
-&nbsp;       </section>
-
-
-
-&nbsp;       <section id="education">
-
-&nbsp;           <h2>Education \& Certifications</h2>
-
-&nbsp;           <ul>
-
-&nbsp;               <li><strong>Post-Graduate Cert. Quality Engineering Management</strong> - Lambton College, Toronto (Present)</li>
-
-&nbsp;               <li><strong>B.Tech in Mechanical Engineering</strong> - SCET, India (2023)</li>
-
-&nbsp;               <li><strong>Certified Lean Six Sigma Green Belt</strong> - NIQC International (2024)</li>
-
-&nbsp;               <li><strong>WHMIS Certified</strong></li>
-
-&nbsp;           </ul>
-
-&nbsp;       </section>
-
-
-
-&nbsp;       <section id="contact">
-
-&nbsp;           <h2>Contact Me</h2>
-
-&nbsp;           <p>I am available for interviews in the Greater Toronto Area.</p>
-
-&nbsp;           <p>📞 <strong>Phone:</strong> 437-881-1330</p>
-
-&nbsp;           <p>📧 <strong>Email:</strong> <a href="mailto:lakhanichirag.pd@gmail.com">lakhanichirag.pd@gmail.com</a></p>
-
-&nbsp;           <p>🔗 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/chirag-lakhani-6442971a1" target="\_blank">View Profile</a></p>
-
-&nbsp;       </section>
-
-
-
-&nbsp;   </div>
-
-
-
-&nbsp;   <footer>
-
-&nbsp;       <p>\&copy; 2025 Chirag Lakhani. Built for Engineering Opportunities.</p>
-
-&nbsp;   </footer>
-
-
+    <nav>
+        <div class="logo">CL</div>
+        <ul>
+            <li><a href="#about"><span style="color:var(--accent)">01.</span> About</a></li>
+            <li><a href="#experience"><span style="color:var(--accent)">02.</span> Experience</a></li>
+            <li><a href="#projects"><span style="color:var(--accent)">03.</span> Case Studies</a></li>
+            <li><a href="#contact"><span style="color:var(--accent)">04.</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <p class="intro">Hi, my name is</p>
+        <h1>Chirag Lakhani.</h1>
+        <h2>I build reliability into systems.</h2>
+        <p>
+            I am a Mechanical Engineer & Lean Six Sigma Green Belt. I specialize in turning chaotic manufacturing problems into streamlined, zero-defect processes using data and precision.
+        </p>
+        <div>
+            <a href="#experience" class="btn-main">View My Experience</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-text">
+            <div style="display:flex; align-items:center; margin-bottom:20px;">
+                <span style="color:var(--accent); font-family:'Roboto Mono'; font-size:1.5rem; margin-right:10px;">01.</span>
+                <h3 style="font-size:2rem; color:#fff;">About Me</h3>
+            </div>
+            
+            <p style="color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;">
+                I am a problem solver at heart. My engineering journey is built on the belief that <strong class="highlight">Operational Efficiency</strong> and <strong class="highlight">Quality</strong> are the same thing. 
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                I bring over 1.5 years of hands-on experience in <strong>Maintenance, Quality Control, and Metrology</strong>.
+            </p>
+            
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: var(--text-muted);">
+                <li><span style="color:var(--accent)">▹</span> Lean Six Sigma</li>
+                <li><span style="color:var(--accent)">▹</span> SolidWorks</li>
+                <li><span style="color:var(--accent)">▹</span> ISO 9001 Auditing</li>
+                <li><span style="color:var(--accent)">▹</span> Root Cause Analysis</li>
+            </ul>
+        </div>
+        
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Chirag Lakhani" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=CL&background=112240&color=64ffda&size=300'">
+        </div>
+    </section>
+
+    <div id="experience" class="section-header" style="max-width: 1000px;">
+        <span>02.</span>
+        <h3>Where I've Worked</h3>
+        <div class="line"></div>
+    </div>
+
+    <section class="experience-section">
+        
+        <div class="job-card">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Junior Maintenance Technician / QC</span>
+                    <br>
+                    <span class="job-company">@ Lizza Gruh Udhyog</span>
+                </div>
+                <span class="job-date">Apr 2023 – Apr 2024</span>
+            </div>
+            <ul class="job-list">
+                <li>Spearheaded a continuous improvement initiative using <strong class="highlight">5S Methodology</strong> that increased throughput by <strong class="highlight">16%</strong>.</li>
+                <li>Led Root Cause Analysis (Fishbone) to resolve a persistent machine jamming issue, reducing downtime by <strong class="highlight">15%</strong>.</li>
+                <li>Managed Incoming Quality Control (IQC), ensuring 100% compliance with ISO standards and achieving a <strong class="highlight">Zero-Defect Rate</strong> for shipments.</li>
+                <li>Performed preventive maintenance on packaging machinery, calibrating sensors and aligning conveyor belts.</li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Quality Assurance Intern</span>
+                    <br>
+                    <span class="job-company">@ Swastik Engineering Work</span>
+                </div>
+                <span class="job-date">Feb 2023 – May 2023</span>
+            </div>
+            <ul class="job-list">
+                <li>Conducted precision dimensional inspections using <strong class="highlight">Calipers, Micrometers, and Bore Gauges</strong>.</li>
+                <li>Verified machined components against complex engineering <strong class="highlight">Blueprints & GD&T</strong> specifications.</li>
+                <li>Assisted in generating Non-Conformance Reports (NCRs) and collaborated with engineers to implement corrective actions.</li>
+            </ul>
+        </div>
+
+        <div class="job-card">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Engineering Intern</span>
+                    <br>
+                    <span class="job-company">@ Laxmipati Engineering Works</span>
+                </div>
+                <span class="job-date">Jun 2022 – Jul 2022</span>
+            </div>
+            <ul class="job-list">
+                <li>Supported internal quality audits by organizing documentation and verifying process adherence.</li>
+                <li>Maintained accurate daily quality logs and assisted senior engineers with production inspections.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div id="projects" class="section-header">
+        <span>03.</span>
+        <h3>Impact Case Studies</h3>
+        <div class="line"></div>
+    </div>
+
+    <div class="projects-grid">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-wrench"></i></div>
+            <h4>Downtime Reduction</h4>
+            <p>Analyzed a high-failure packaging line. Identified belt tensioner misalignment using Fishbone analysis. Implemented a mechanical fix that saved <strong>15% downtime</strong>.</p>
+            <div class="tags">RCA MAINTENANCE MECH-ENG</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <h4>Process Optimization</h4>
+            <p>Redesigned the IQC tool retrieval workflow using 5S principles. Cut wasted motion and improved inspection throughput by <strong>16%</strong>.</p>
+            <div class="tags">LEAN 5S KAIZEN</div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+            <h4>Zero-Defect Shipment</h4>
+            <p>Managed end-to-end quality for outgoing orders. Achieved <strong>0 defects (PPM)</strong> by implementing stricter AQL sampling plans.</p>
+            <div class="tags">ISO9001 AQL QUALITY</div>
+        </div>
+    </div>
+
+    <section id="contact" style="text-align: center; padding: 100px 20px;">
+        <p style="color: var(--accent); font-family: 'Roboto Mono'; margin-bottom: 20px;">04. What's Next?</p>
+        <h2 style="font-size: 3rem; margin-bottom: 30px;">Get In Touch</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 50px auto;">
+            I am currently looking for new opportunities in Quality Engineering and Maintenance in North York and the GTA.
+        </p>
+        <a href="mailto:lakhanichirag.pd@gmail.com" class="btn-main">Say Hello</a>
+    </section>
+
+    <footer style="text-align:center; padding:20px; color:#8892b0; font-size:0.8rem;">
+        <p>Built by Chirag Lakhani</p>
+    </footer>
 
 </body>
-
 </html>
-
